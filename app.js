@@ -20,125 +20,7 @@ app.get("/studentFAQ",(req,res)=>{
 app.get("/facultyFAQ",(req,res)=>{
     res.render('FAQ2');
 })
-/*
 
-app.get("/employee",(req,res)=>{
-    res.render('employeeLogin',{massage:'plz login here'});
-})
-app.get("/admin",(req,res)=>{
-    res.render('adminLogin');
-})
-
-app.post('/employee',(req,res)=>{
-    // console.log(req.body);
-    let employee = req.body;
-    let sql=`SELECT * FROM employee WHERE employeeId = '${employee.employeeId}' AND passwords = '${employee.password}'`
-    db.query(sql,(err,data)=>{
-        // console.log(data[0].name);
-        // let Name = data[0].name;
-        // console.log(data[0]);
-        if(err){
-            res.send('error are occuring');
-            throw err;
-        }
-        else if(data[0]==null){
-            
-            res.render('employeeLogin',{massage:'userId or password incorrect'});
-            
-        }
-        else{
-            res.render('employee',{data});
-
-        }
-
-    })
-})
-
-
-app.post('/admin',(req,res)=>{
-    console.log(req.body);
-    let admin = req.body;
-    res.render('admin',{admin});
-})
-
-app.get("/employeeDetails",(req,res) =>{
-    let sql =  `SELECT * FROM employee`;
-    let query = db.query(sql,(err,data)=>{
-        if(err) throw err;
-        // console.log(data);
-        res.render('employeeDetails',{data});
-    })
-    
-});
-app.get("/:employeeId",(req,res) =>{
-    let sql =  `SELECT * FROM employee where employeeId='${req.params.employeeId}'`;
-    let query = db.query(sql,(err,data)=>{
-        if(err) throw err;
-        // console.log(data);
-        res.render('employeeProfile',{data});
-    })
-    
-});
-/////////////////////////////////////////////////////////////
-app.get('/attendenceList',(req,res)=>{
-    let sql =  `SELECT * FROM EmployeeAttendence `;
-    let message = 'Attendence of Employee ';
-    let query = db.query(sql,(err,data)=>{
-        if(err) throw err;
-        // console.log(data);
-        res.render('attendenceList',{data,message});
-    })
-});
-app.get('/attendence',(req,res)=>{
-    res.render('attendence');
-})
-app.get('/attendence/:Entry_DATE',(req,res)=>{
-    let sql =  `SELECT * FROM EmployeeAttendence WHERE Entry_DATE='${req.params.Entry_DATE}'`;
-    let message = 'Attendence of Employee According to Entry date';
-    let query = db.query(sql,(err,data)=>{
-        if(err) throw err;
-        // console.log(data);
-        res.render('attendenceList',{data,message});
-    })
-});
-app.get('/attendenceEmp/:ENO',(req,res)=>{
-    let sql =  `SELECT * FROM EmployeeAttendence WHERE ENO=${req.params.ENO}`;
-    let message = 'Attendence of Employee According to Employee Number';
-    let query = db.query(sql,(err,data)=>{
-        if(err) throw err;
-        // console.log(data);
-        res.render('attendenceList',{data,message});
-    })
-});
-
-
-app.post('/', function(req,res){
-    console.log(req.body);
-    res.send(req.body);
-  });
-
-
-
-
-
-app.post('/submit',(req,res)=>{
-    console.log(req.body);
-    console.log(res.body);
-    res.send('form is successfull submited!');
-})
-// app.get('/employee/:ENO', (req,res) => {
-    
-//     let sql = `SELECT * FROM employee WHERE ENO=${req.params.ENO}`;
-//     let query = db.query(sql,(err,result) => {
-
-//         if(err) throw err;
-//         // console.log(result);
-//         res.send(`fetched employee using id ${req.params.ENO} ...`);
-//     });
-// });
-
-
-*/
 
 app.get('/',(req,res)=>{
 
@@ -290,13 +172,7 @@ app.get('/student/newInternship/:studentId',(req,res)=>{
 
     })
 })
-// app.get('/student/dashboard/:studentId',(req,res)=>{
-//     let sql = `SELECT * FROM student WHERE studentId='${req.params.studentId}'`;
-//     db.query(sql,(err,data)=>{
-//         res.render('studentDashboard',{data});
-//     })
-    
-// })
+
 app.get('/student/profile/:studentId',(req,res)=>{
     let sql = `SELECT * FROM student WHERE studentId='${req.params.studentId}'`;
     db.query(sql,(err,data)=>{
