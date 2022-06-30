@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee</title>
+</head>
+<body>
+    <h2><%=message%></h2>
+<script>
+    let num=10;
+</script>
+    <table border="1" >
+        <tr>
+            <th>Employee Id</th>
+           <th>Employee Name</th>
+           <th>Entry_DATE(DD-MM-YYYY)</th>
+           <th>Entry_Time(HH:MM:SS)</th>
+           <th>Exit_time(HH:MM:SS)</th>
+           <th>Working Time(Hours)</th>
+           <th>Present (if not empty)</th>
+        </tr>
+    
+        <% for(var i=0; i < data.length; i++) { %>
+            <tr>
+                <td><%= data[i].ENO %></td>
+                <td><%= data[i].ENAME %></td>
+                <td><%= data[i].Entry_DATE %></td>
+                <td><%= data[i].Entry_Time %></td>
+                <td><%= data[i].Exit_time %></td>
+                
+                <td><%= parseInt((data[i].Exit_time).substring(0,2))-parseInt((data[i].Entry_Time).substring(0,2))  %><span> hours</span></td>
+                <td><%= data[i].present %></td>
+                
+            </tr>
+        <% } %>
+
+</body>
+</html>

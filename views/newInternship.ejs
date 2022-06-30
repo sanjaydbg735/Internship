@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>new Intership</title>
+   </head>
+	
+   <body>
+      <table border = "1">
+         <tr>
+            <th>internId</th>
+            <th>subjects</th>
+            <th>facultyUnder</th>
+            <th>stipened</th>
+            <th>startingDate</th>
+            <th>timePeriod (in month)</th>
+            
+         </tr>
+         
+         
+         <% for (var i = 0; i < data.length;  i++) { %>
+            <tr>
+                <td><%= data[i].internId %></td>
+                <td><%= data[i].subjects %></td>
+                <td><%= data[i].facultyUnder %></td>
+                <td><%= data[i].stipened %></td>
+                <td><%= data[i].startingDate %></td>
+                <td><%= data[i].timePeriod %></td>
+            </tr> 
+
+            <% } %>
+        </table>
+      
+   </body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SideBar.css">
+    <link rel="stylesheet" href="StudentDashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+    <title>Faculty-Dashboard</title>
+</head>
+<style>
+    *{
+    padding: 0px;
+    margin: 0px;
+}
+
+#container{
+    width: 100vw;
+    height: 45rem;
+}
+
+#navigationmenu{
+    width: 16rem;
+    height: 100vh;
+    background-color: #414B4F;
+    position: fixed;
+    border-top-right-radius: 36px;
+    border-bottom-right-radius: 36px;
+    z-index: 3;
+    box-shadow: 12px 0px 30px black;
+}
+
+#icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-bottom: 3px;
+}
+
+#icon img {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 45px;
+    background-color: white;
+}
+
+#navbar{
+    padding-left: 34px;
+    padding-top: 34px;
+    padding-right: 15px;
+    margin-top: 12vh;
+}
+
+#nav{
+    list-style: none;
+}
+
+.menulist{
+    margin: 8vh 0px;
+}
+
+#nav li a{
+    text-decoration: double;
+    color: white;
+    font-family: 'Tapestry', cursive;
+    
+}
+
+.fixblock{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding: 4px;
+    border-radius: 17px;
+}
+
+.fixblock:hover{
+    background-color: white;
+}
+
+.active{
+    background-color: white;
+    color: black;
+}
+
+.active i{
+    color: black;
+}
+
+.newicon{
+    color: white;
+    margin-left: auto;
+}
+  
+.menulist:hover p,
+.menulist:hover i{
+    color: black;
+}
+
+
+/* '~' is used to do change in particular class when the given event has occured*/
+/* In this below line when the cursor hover over the given list items it changes the display-type of active */
+
+</style>
+<style>
+    *{
+    padding: 0px;
+    margin: 0px;
+}
+/*  */
+/*  */
+/* Home */
+
+
+#home {
+    width: 79.7vw;
+    height: 45rem;
+    position: absolute;
+    left: 16rem;
+    z-index: 1;
+    padding: 22px;
+    background-color: rgb(250, 242, 242)
+}
+
+#block{
+    display: flex;
+    width: 65vw;
+    position: absolute;
+    top: 140px;
+    left: 90px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+    box-shadow: 8px 8px 8px black;
+}
+
+/*  */
+/* Left Side */
+
+#leftside{
+    padding: 22px;
+    background-color: #414B4F;
+    border-top-left-radius: 20px;
+}
+
+#photo img {
+    width: 12vw;
+    height: 17vw;
+    border-radius: 8px;
+}
+
+.write{
+    font-family: 'Tapestry', cursive;
+    color: white;
+    text-align: center;
+    margin-top: 8px;
+}
+
+#myWork{
+    font-size: smaller;
+}
+
+/*  */
+/* Right Side */
+
+#rightside{
+    padding: 22px;
+}
+
+#lower{
+    margin-top: 90px;
+}
+
+#info{
+    display: flex;
+    margin-top: 12px;
+}
+
+#phone{
+    margin-left: auto;
+}
+
+#Selection{
+    margin-top: 20px;
+}
+
+#select,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 4px;
+    text-align: left;
+    font-family: 'Tapestry', cursive;
+}
+
+#select th{
+    background-color: #414B4F;
+    color: white;
+}
+
+.font1{
+    font-family: 'Tapestry', cursive;
+}
+
+.font2{
+    font-family: 'Tapestry', cursive;
+    color: #464c4f;
+}
+
+
+</style>
+<body>
+    <div id="container">
+
+        <div id="navigationmenu">
+            <div id="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Indian_Institute_of_Information_Technology,_Allahabad_Logo.png" alt="CollegeLogo">
+            </div>
+
+            <div id="navbar">
+                <ul id="nav">
+
+                    <li class="menulist"><a class="listlinks" href="#">
+                            <div class="fixblock active"><p>Dashboard</p><i class="fa-solid fa-house newicon"></i></div>
+                        </a>
+                    </li>
+
+                    <li class="menulist"><a class="listlinks" href="profile/<%=data[0].facultyId%>">
+                        <div class="fixblock"><p>Update/View Profile</p><i class="fa-solid fa-address-card newicon"></i></div>
+                        </a>
+                    </li>
+
+                    <li class="menulist"><a class="listlinks" href="addInternship/<%=data[0].facultyId%>">
+                        <div class="fixblock"><p>Add New Internship</p><i class="fa-solid fa-address-card newicon"></i></div>
+                        </a>
+                    </li>
+
+                    <li class="menulist"><a class="listlinks" href="facultyFAQ">
+                        <div class="fixblock"><p>Post/View FAQ</p><i class="fa-solid fa-circle-question newicon"></i></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="home">
+            <!-- What to do in dasboard -->
+            <!-- 1.Selection in any programm or not -->
+
+            <div id="block">
+                <div id="leftside">
+                    <div id="photo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1200px-User_icon_2.svg.png" alt="">
+                    </div>
+                    <div id="name" class="write">
+                       <%=data[0].facultyName%>
+                    </div>
+                    <div id="myWork" class="write">
+                        <%=data[0].department%>
+                    </div>
+                </div>
+                
+                <div id="rightside">
+                    <div id="upper">
+                        <h2 class="font1">Information</h2>
+                        <hr>
+                        <div id="info">
+                            <div id="Email">
+                                <h2 class="font1">Email </h2>
+                                <p class="font2"><%=data[0].email%></p>
+                            </div>
+                            <div id="phone">
+                                <h2 class="font1">Phone Number</h2>
+                                <p class="font2"><%=data[0].phoneNumber%></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="lower">
+                        <h2 class="font1">Enrolled Internship</h2>
+                        <hr>
+                        <div id="Selection">
+                            <table id="select">
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Subject</th>
+                                    <th>Faculty Name</th>
+                                    <th>Time Period (Month)</th>
+                                    <th>Stipend</th>
+                                    <th>Starting Date</th>
+                                    <th>Application Status</th>
+                                </tr>
+
+
+                                <% for (var i = 0; i < (data2.length);  i++) { %>
+                                    <tr>
+                                        <td><%=i+1%></td>
+                                        <td><%= data2[i].subjects %></td>
+                                        <td><%= data2[i].facultyUnder %></td>
+                                        <td><%= data2[i].timePeriod %></td>
+                                        <td><%= data2[i].stipened %></td>
+                                        <td><%= data2[i].startingDate %></td>
+                                        <td><%= data2[i].status %></td>
+                                    </tr> 
+                        
+                                    <% } %>
+                                
+                            </table>
+                        </div>
+
+                        <h2 class="font1">Enrolled Internship</h2>
+                        <hr>
+                        <div id="Selection">
+                            <table id="select">
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Subject</th>
+                                    <th>Faculty Name</th>
+                                    <th>Time Period (Month)</th>
+                                    <th>Stipend</th>
+                                    <th>Starting Date</th>
+                                    <th>Application Status</th>
+                                </tr>
+
+
+                                <% for (var i = 0; i < (data2.length);  i++) { %>
+                                    <tr>
+                                        <td><%=i+1%></td>
+                                        <td><%= data2[i].subjects %></td>
+                                        <td><%= data2[i].facultyUnder %></td>
+                                        <td><%= data2[i].timePeriod %></td>
+                                        <td><%= data2[i].stipened %></td>
+                                        <td><%= data2[i].startingDate %></td>
+                                        <td><%= data2[i].status %></td>
+                                    </tr> 
+                        
+                                    <% } %>
+                                
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        
+    </div>
+
+    <script src="https://kit.fontawesome.com/24c1065ad6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

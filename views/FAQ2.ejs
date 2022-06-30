@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SideBar.css">
+    <link rel="stylesheet" href="StudentFAQ.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+    <title>Faculty-FAQ</title>
+</head>
+<style>
+    *{
+    padding: 0px;
+    margin: 0px;
+}
+
+#container{
+    width: 100vw;
+    height: 45rem;
+}
+
+#navigationmenu{
+    width: 16rem;
+    height: 100vh;
+    background-color: #414B4F;
+    position: fixed;
+    border-top-right-radius: 36px;
+    border-bottom-right-radius: 36px;
+    z-index: 3;
+    box-shadow: 12px 0px 30px black;
+}
+
+#icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-bottom: 3px;
+}
+
+#icon img {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 45px;
+    background-color: white;
+}
+
+#navbar{
+    padding-left: 34px;
+    padding-top: 34px;
+    padding-right: 15px;
+    margin-top: 12vh;
+}
+
+#nav{
+    list-style: none;
+}
+
+.menulist{
+    margin: 8vh 0px;
+}
+
+#nav li a{
+    text-decoration: double;
+    color: white;
+    font-family: 'Tapestry', cursive;
+    
+}
+
+.fixblock{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding: 4px;
+    border-radius: 17px;
+}
+
+.fixblock:hover{
+    background-color: white;
+}
+
+.active{
+    background-color: white;
+    color: black;
+}
+
+.active i{
+    color: black;
+}
+
+.newicon{
+    color: white;
+    margin-left: auto;
+}
+  
+.menulist:hover p,
+.menulist:hover i{
+    color: black;
+}
+
+
+/* '~' is used to do change in particular class when the given event has occured*/
+/* In this below line when the cursor hover over the given list items it changes the display-type of active */
+
+</style>
+<style>
+    *{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+.present{
+  background-color: white;
+  width: 94%;
+  height: 5.6%;
+  position: absolute;
+  top: 66.8%;
+  left: 13px;
+  border-radius: 15px;
+  z-index: -1;
+  transition: top 0.5s;
+}
+
+.menulist:nth-child(4) i,
+.menulist:nth-child(4) p{
+  color: black;
+}
+
+/*  */
+/*  */
+/* FAQ */
+
+
+.home {
+    width: 55vw;
+    height: 45rem;
+    position: absolute;
+    left: 16rem;
+    padding: 119px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+ 
+.accordion .accordion-item button[aria-expanded='true'] {
+  border-bottom: 1px solid #03b5d2;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: #03b5d2;
+}
+
+/* .accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+} */
+
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+/* HERE I uses 2 pseudo selector before and after.Before our selection only '-' is visible due to block present in before but after selection '+' is visible due to new block come in after pseudo selector. */
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded='true'] {
+  color: #03b5d2;
+}
+
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+} 
+
+</style>
+<body>
+    <div id="container">
+
+        <div class="home">
+            <h2>Frequently Asked Questions By faculty members</h2>
+
+            <div class="accordion">
+
+                <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                        <span class="accordion-title">What is the benifit of Doing Internship?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
+                            Ut tortor pretium viverra suspendisse potenti.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button id="accordion-button-2" aria-expanded="false">
+                        <span class="accordion-title">What is the benifit of Doing Internship?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
+                            Ut tortor pretium viverra suspendisse potenti.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button id="accordion-button-3" aria-expanded="false">
+                        <span class="accordion-title">What is the benifit of Doing Internship?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
+                            Ut tortor pretium viverra suspendisse potenti.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button id="accordion-button-4" aria-expanded="false">
+                        <span class="accordion-title">What is the benifit of Doing Internship?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
+                            Ut tortor pretium viverra suspendisse potenti.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button id="accordion-button-5" aria-expanded="false">
+                        <span class="accordion-title">What is the benifit of Doing Internship?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
+                            Ut tortor pretium viverra suspendisse potenti.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/24c1065ad6.js" crossorigin="anonymous"></script>
+    <script>
+        const items = document.querySelectorAll('.accordion button');
+
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle == 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        items.forEach((item) => item.addEventListener('click', toggleAccordion));
+    </script>
+</body>
+
+</html>

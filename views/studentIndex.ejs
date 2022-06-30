@@ -1,0 +1,439 @@
+<%- include('studentHeader.ejs') %>
+    <div id="container">
+        
+        <div id="navigation">
+
+            <div id="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Indian_Institute_of_Information_Technology%2C_Allahabad_Logo.png" alt="CollegeLogo">
+            </div>
+            <div id="navbar">
+                <ul id="nav">
+                    <!-- Try to make drop down in the links of For Faculty and For students where things such as Login and FAQ for student are availabe  -->
+                    <li class="navlinks"><a class="links" href="#wwww"> <%=data[0].studentId %></a></li>
+                    <li class="navlinks"><a class="links" href="#home">Home</a></li>
+                    <li class="navlinks"><a class="links" href="#AboutIIIT">About Us</a></li>
+                    <li class="navlinks"><a class="links" href="#projectlist">Internships</a></li>
+
+                    <li class="menulist"><a class="listlinks" href="student/dashboard/studentId?=<%=data[0].studentId%>">
+                        <div class="fixblock"><p>Dashboard</p><i class="fa-solid fa-address-card newicon"></i></div>
+                        </a>
+                    </li>
+                    <li class="navlinks"><a class="links" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="home">
+            <div id="wallpaper" class="wallpaper-1">
+                <i id="PreviousButton" class="fa-solid fa-angle-left"></i>
+                <i id="NextButton" class="fa-solid fa-angle-right"></i>
+            </div>
+            <div id="hhome">
+                <h1>Summer Internship Offered @ IIIT-Allahabad 2022</h1>
+            </div>
+        </div>
+
+        <div id="AboutIIIT">
+            <div id="Info">
+                <p class="aboutInfo">
+                    Indian Institute of Information Technology, Allahabad (IIIT-Allahabad) is a public university
+                    located in Jhalwa, Allahabad (Prayagraj), in Uttar Pradesh. It is one of the nineteen Indian
+                    Institutes of Information Technology listed by the Ministry of Education (India).
+                </p>
+
+                <p class="aboutInfo">
+                    Established in 1999, as a Centre of Excellence in Information Technology and allied areas, the
+                    IIIT-A was conferred the Deemed University status by Govt. of India in the year 2000.
+                </p>
+
+                <p class="aboutInfo">
+                    Each year our faculty members invest their time, effort & innovation in some great real-time
+                    projects.The projects are listed below. A student can apply for a max of <span class="warning">03
+                        projects</span>. The last date to apply is<span class="warning"> 30th April 2022</span>. The
+                    results will be up on the website by <span class="warning">15th May 2022</span> & the internship
+                    will commence from <span class="warning">18th May 2022</span>.
+                </p>
+
+                <p class="aboutInfo">
+                    The main aim of the internship is to provide an opportunity and exposure to the outstanding senior
+                    level (2nd/ 3rd/ 4th Year) undergraduate student. B.Tech-M.Tech Dual Degree are also encouraged to
+                    apply to interact with the world-class faculty members and state-of-the-art research facilities of
+                    the institute.
+                </p>
+
+                <p class="aboutInfo">
+                    Interested students from NITs, IIITs, IITs and other reputed central/ state institutions from all
+                    over the country can apply. The offer will be selective, based on academic merit and SOP (Statement
+                    of Purpose).
+                </p>
+            </div>
+
+            <div id="process">
+                <div id="processhead">
+                    <h2>Process to apply for Internship</h2>
+                </div>
+                <ol id="processlist">
+                    <li class="inst">The details of the project openings are listed below.</li>
+                    <li class="inst">Click on <span class="warning">'Apply Here'</span> present Below in project</li>
+                    <li class="inst">Login with your Google account</li>
+                    <li class="inst">Fill the registration form. If you want hostel select the checkbox accordingly.
+                    </li>
+                    <li class="inst">For hostel booking details please contact at IIIT Allahabad</li>
+                    <li class="inst">To apply for any project just click the apply button</li>
+                    <li class="inst">Done</li>
+                </ol>
+                <div class="inst">Students who get selected for the summer internship at IIIT-Allahabad will be
+                    receiving a stipend of 5k per month</div>
+            </div>
+        </div>
+
+        <div id="projectlist">
+            <h2>Summer Internship Projects 2022 at IIIT-Allahabad</h2>
+            <!-- Use Table Here.Don't try to ue grid here as it will make many problem and data upload will be difficult -->
+            <div id="available">
+                <table>
+                    <tr>
+                        <th class="tablehead">S.No</th>
+                        <th class="tablehead">Faculty Name</th>
+                        <th class="tablehead">Project Name</th>
+                        <th class="tablehead">Project Details</th>
+                        <th class="tablehead">Duration</th>
+                        <th class="tablehead">Form Status</th>
+                    </tr>
+
+                    <tr>
+                        <td class="tableitems">1</td>
+                        <td class="tableitems">Rahul Kala</td>
+
+                        <td class="tableitems"><span>Enveave - Backend Developer (Intern)</span><br>
+                            <a href="#form" class="newlink">Apply Here</a><br>
+                            <img alt="Gif Image" src="BackGround_Images/Gif-3.gif"
+                                style="width:25px; border:none; margin:0; display:inline; padding:0">
+                        </td>
+
+                        <td class="tableitems">Live experience of building products in the climate change sector. We
+                            promote a decentralised work culture which means that you’ll have sufficient freedom to take
+                            initiatives, test new ideas, break stuff and build new things. You see a need – build it,
+                            see something broken - solve it. We are a cross-functioning tech team and work across
+                            different competencies, collaboratively. You can take initiatives in addition to your core
+                            work and based on your interests to explore work in strategy, operations, marketing, or
+                            other tech platforms. Access to experienced peers. Our teams are led and mentored by people
+                            who have spent years in several industries. You’ll get direct access to their mentorship and
+                            learn from their experiences.</td>
+                        <td class="tableitems">3 Months</td>
+                        <td class="tableitems">Open</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tableitems">2</td>
+                        <td class="tableitems">Rahul Kala</td>
+
+                        <td class="tableitems"><span>Enveave - Backend Developer (Intern)</span><br>
+                            <a href="#form" class="newlink">Apply Here</a><br>
+                            <img alt="Gif Image" src="BackGround_Images/Gif-3.gif"
+                                style="width:25px; border:none; margin:0; display:inline; padding:0">
+                        </td>
+
+                        <td class="tableitems">Live experience of building products in the climate change sector. We
+                            promote a decentralised work culture which means that you’ll have sufficient freedom to take
+                            initiatives, test new ideas, break stuff and build new things. You see a need – build it,
+                            see something broken - solve it. We are a cross-functioning tech team and work across
+                            different competencies, collaboratively. You can take initiatives in addition to your core
+                            work and based on your interests to explore work in strategy, operations, marketing, or
+                            other tech platforms. Access to experienced peers. Our teams are led and mentored by people
+                            who have spent years in several industries. You’ll get direct access to their mentorship and
+                            learn from their experiences.</td>
+                        <td class="tableitems">3 Months</td>
+                        <td class="tableitems">Open</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tableitems">3</td>
+                        <td class="tableitems">Rahul Kala</td>
+
+                        <td class="tableitems"><span>Enveave - Backend Developer (Intern)</span><br>
+                            <a href="#form" class="newlink">Apply Here</a><br>
+                            <img alt="Gif Image" src="BackGround_Images/Gif-3.gif"
+                                style="width:25px; border:none; margin:0; display:inline; padding:0">
+                        </td>
+
+                        <td class="tableitems">Live experience of building products in the climate change sector. We
+                            promote a decentralised work culture which means that you’ll have sufficient freedom to take
+                            initiatives, test new ideas, break stuff and build new things. You see a need – build it,
+                            see something broken - solve it. We are a cross-functioning tech team and work across
+                            different competencies, collaboratively. You can take initiatives in addition to your core
+                            work and based on your interests to explore work in strategy, operations, marketing, or
+                            other tech platforms. Access to experienced peers. Our teams are led and mentored by people
+                            who have spent years in several industries. You’ll get direct access to their mentorship and
+                            learn from their experiences.</td>
+                        <td class="tableitems">3 Months</td>
+                        <td class="tableitems">Open</td>
+                    </tr>
+
+                    <tr>
+                        <td class="tableitems">4</td>
+                        <td class="tableitems">Rahul Kala</td>
+
+                        <td class="tableitems"><span>Enveave - Backend Developer (Intern)</span><br>
+                            <a href="#form" class="newlink">Apply Here</a><br>
+                            <img alt="Gif Image" src="BackGround_Images/Gif-3.gif"
+                                style="width:25px; border:none; margin:0; display:inline; padding:0">
+                        </td>
+
+                        <td class="tableitems">Live experience of building products in the climate change sector. We
+                            promote a decentralised work culture which means that you’ll have sufficient freedom to take
+                            initiatives, test new ideas, break stuff and build new things. You see a need – build it,
+                            see something broken - solve it. We are a cross-functioning tech team and work across
+                            different competencies, collaboratively. You can take initiatives in addition to your core
+                            work and based on your interests to explore work in strategy, operations, marketing, or
+                            other tech platforms. Access to experienced peers. Our teams are led and mentored by people
+                            who have spent years in several industries. You’ll get direct access to their mentorship and
+                            learn from their experiences.</td>
+                        <td class="tableitems">3 Months</td>
+                        <td class="tableitems">Open</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2>Recently Closed</h2>
+            <div id="unavailable">
+                <table>
+                    <tr>
+                        <th class="tablehead">S.No</th>
+                        <th class="tablehead">Faculty Name</th>
+                        <th class="tablehead">Project Name</th>
+                        <th class="tablehead">Project Details</th>
+                        <th class="tablehead">Duration</th>
+                        <th class="tablehead">Form Status</th>
+                    </tr>
+
+                    <tr>
+                        <td class="tableitems">1</td>
+                        <td class="tableitems">Rahul Kala</td>
+                        <td class="tableitems"><span>Enveave - Backend Developer (Intern)</span></td>
+                        <td class="tableitems">Live experience of building products in the climate change sector. We
+                            promote a decentralised work culture which means that you’ll have sufficient freedom to take
+                            initiatives, test new ideas, break stuff and build new things. You see a need – build it,
+                            see something broken - solve it. We are a cross-functioning tech team and work across
+                            different competencies, collaboratively. You can take initiatives in addition to your core
+                            work and based on your interests to explore work in strategy, operations, marketing, or
+                            other tech platforms. Access to experienced peers. Our teams are led and mentored by people
+                            who have spent years in several industries. You’ll get direct access to their mentorship and
+                            learn from their experiences.</td>
+                        <td class="tableitems">3 Months</td>
+                        <td class="tableitems">Closed</td>
+                    </tr>
+                    <tr>
+                        <td class="tableitems">2</td>
+                        <td class="tableitems">Rahul Kala</td>
+                        <td class="tableitems"><span>Enveave - Backend Developer (Intern)</span></td>
+                        <td class="tableitems">Live experience of building products in the climate change sector. We
+                            promote a decentralised work culture which means that you’ll have sufficient freedom to take
+                            initiatives, test new ideas, break stuff and build new things. You see a need – build it,
+                            see something broken - solve it. We are a cross-functioning tech team and work across
+                            different competencies, collaboratively. You can take initiatives in addition to your core
+                            work and based on your interests to explore work in strategy, operations, marketing, or
+                            other tech platforms. Access to experienced peers. Our teams are led and mentored by people
+                            who have spent years in several industries. You’ll get direct access to their mentorship and
+                            learn from their experiences.</td>
+                        <td class="tableitems">3 Months</td>
+                        <td class="tableitems">Closed</td>
+                    </tr>
+                    <tr>
+                        <td class="tableitems">3</td>
+                        <td class="tableitems">Rahul Kala</td>
+                        <td class="tableitems"><span>Enveave - Backend Developer (Intern)</span></td>
+                        <td class="tableitems">Live experience of building products in the climate change sector. We
+                            promote a decentralised work culture which means that you’ll have sufficient freedom to take
+                            initiatives, test new ideas, break stuff and build new things. You see a need – build it,
+                            see something broken - solve it. We are a cross-functioning tech team and work across
+                            different competencies, collaboratively. You can take initiatives in addition to your core
+                            work and based on your interests to explore work in strategy, operations, marketing, or
+                            other tech platforms. Access to experienced peers. Our teams are led and mentored by people
+                            who have spent years in several industries. You’ll get direct access to their mentorship and
+                            learn from their experiences.</td>
+                        <td class="tableitems">3 Months</td>
+                        <td class="tableitems">Closed</td>
+                    </tr>
+                    <tr>
+                        <td class="tableitems">4</td>
+                        <td class="tableitems">Rahul Kala</td>
+                        <td class="tableitems"><span>Enveave - Backend Developer (Intern)</span></td>
+                        <td class="tableitems">Live experience of building products in the climate change sector. We
+                            promote a decentralised work culture which means that you’ll have sufficient freedom to take
+                            initiatives, test new ideas, break stuff and build new things. You see a need – build it,
+                            see something broken - solve it. We are a cross-functioning tech team and work across
+                            different competencies, collaboratively. You can take initiatives in addition to your core
+                            work and based on your interests to explore work in strategy, operations, marketing, or
+                            other tech platforms. Access to experienced peers. Our teams are led and mentored by people
+                            who have spent years in several industries. You’ll get direct access to their mentorship and
+                            learn from their experiences.</td>
+                        <td class="tableitems">3 Months</td>
+                        <td class="tableitems">Closed</td>
+                    </tr>
+                    <tr>
+                        <td class="tableitems">5</td>
+                        <td class="tableitems">Rahul Kala</td>
+                        <td class="tableitems"><span>Enveave - Backend Developer (Intern)</span></td>
+                        <td class="tableitems">Live experience of building products in the climate change sector. We
+                            promote a decentralised work culture which means that you’ll have sufficient freedom to take
+                            initiatives, test new ideas, break stuff and build new things. You see a need – build it,
+                            see something broken - solve it. We are a cross-functioning tech team and work across
+                            different competencies, collaboratively. You can take initiatives in addition to your core
+                            work and based on your interests to explore work in strategy, operations, marketing, or
+                            other tech platforms. Access to experienced peers. Our teams are led and mentored by people
+                            who have spent years in several industries. You’ll get direct access to their mentorship and
+                            learn from their experiences.</td>
+                        <td class="tableitems">3 Months</td>
+                        <td class="tableitems">Closed</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="upperblock"></div>
+            <div id="lowerblock">
+                <div id="copyright">© 2022 Utkarsh Varshney. All rights reserved.</div>
+                <div id="socialnetworks">    
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/pages/category/College---university/IIIT-Allahabad-144574835631387/" target="_blank"><i class="fa-brands fa-facebook"></i></a>    
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/iiita_official?lang=en" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://in.linkedin.com/school/indian-institute-of-information-technology-allahabad-india/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/iiit.allahabad/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/24c1065ad6.js" crossorigin="anonymous"></script>
+    <!-- <script src="MainPage.js"></script> -->
+    <script>
+        console.log('Welcome To My Website.This Website Was Created By-Utkarsh Varshney');
+
+let Wallpaper_indx=1;
+let home=document.getElementById('wallpaper');
+let next=document.getElementById('NextButton');
+let previous=document.getElementById('PreviousButton');
+let student=document.getElementById('studentdrop');
+let studentdropmenu=document.getElementById('studentdropmenu');
+let faculty=document.getElementById('facultydrop');
+let facultydropmenu=document.getElementById('facultydropmenu');
+
+let flag1=0;   //Used for drop menu appear and disappear
+let flag2=0;
+
+home.classList.remove
+
+setInterval(() => {
+    if(Wallpaper_indx>4){
+        Wallpaper_indx=0;
+    }
+
+    if(Wallpaper_indx==0){
+        home.classList.remove(`wallpaper-5`);
+    }
+    else{
+        home.classList.remove(`wallpaper-${Wallpaper_indx}`);
+    }
+    home.classList.add(`wallpaper-${Wallpaper_indx+1}`);
+    Wallpaper_indx+=1;
+}, 8000);
+
+
+
+//Smooth Scrolling
+Array.from(document.getElementsByClassName('links')).forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+// Make forward and backward button
+next.addEventListener('click',()=>{
+    
+    if(Wallpaper_indx>4){
+        Wallpaper_indx=0;
+    }
+
+    if(Wallpaper_indx==0){
+        home.classList.remove(`wallpaper-5`);
+    }
+    else{
+        home.classList.remove(`wallpaper-${Wallpaper_indx}`);
+    }
+    home.classList.add(`wallpaper-${Wallpaper_indx+1}`);
+    Wallpaper_indx+=1;
+})
+
+previous.addEventListener('click',()=>{
+    
+    if(Wallpaper_indx<1){
+        Wallpaper_indx=5;
+    }
+    home.classList.remove(`wallpaper-${Wallpaper_indx}`);
+    if(Wallpaper_indx==1){
+        home.classList.add(`wallpaper-5`);
+    }
+    else{
+        home.classList.add(`wallpaper-${Wallpaper_indx-1}`);
+    }
+    Wallpaper_indx-=1;
+})
+
+
+
+//Make Drop Menu Appear and disappear
+faculty.addEventListener('click',()=>{
+    if(flag1===1){
+        facultydropmenu.style.opacity=`0`;
+        flag1=0; 
+    }
+    else if(flag1==0 && flag2==0){
+        facultydropmenu.style.opacity=`0.86`;
+        flag1=1;
+    }
+    else if(flag1==0 && flag2!=0){
+        studentdropmenu.style.opacity=`0`;
+        flag2=0;
+        facultydropmenu.style.opacity=`0.86`;
+        flag1=1;
+    }
+});
+
+student.addEventListener('click',()=>{
+    if(flag2===1){
+        studentdropmenu.style.opacity=`0`;
+        flag2=0;
+    }
+    else if(flag1==0 && flag2==0){
+        studentdropmenu.style.opacity=`0.86`;
+        flag2=1;
+    }
+    else if(flag1!=0 && flag2==0){
+        facultydropmenu.style.opacity=`0`;
+        flag1=0; 
+        studentdropmenu.style.opacity=`0.86`;
+        flag2=1;
+    }
+});
+
+   
+    </script>
+</body>
+
+</html>

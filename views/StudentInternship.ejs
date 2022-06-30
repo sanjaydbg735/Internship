@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SideBar.css">
+    <link rel="stylesheet" href="StudentInternship.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+    <title>Student-Internship</title>
+</head>
+<style>
+    *{
+    padding: 0px;
+    margin: 0px;
+}
+
+#container{
+    width: 100vw;
+    height: 45rem;
+}
+
+#navigationmenu{
+    width: 16rem;
+    height: 100vh;
+    background-color: #414B4F;
+    position: fixed;
+    border-top-right-radius: 36px;
+    border-bottom-right-radius: 36px;
+    z-index: 3;
+    box-shadow: 12px 0px 30px black;
+}
+
+#icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-bottom: 3px;
+}
+
+#icon img {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 45px;
+    background-color: white;
+}
+
+#navbar{
+    padding-left: 34px;
+    padding-top: 34px;
+    padding-right: 15px;
+    margin-top: 12vh;
+}
+
+#nav{
+    list-style: none;
+}
+
+.menulist{
+    margin: 8vh 0px;
+}
+
+#nav li a{
+    text-decoration: double;
+    color: white;
+    font-family: 'Tapestry', cursive;
+    
+}
+
+.fixblock{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding: 4px;
+    border-radius: 17px;
+}
+
+.fixblock:hover{
+    background-color: white;
+}
+
+.active{
+    background-color: white;
+    color: black;
+}
+
+.active i{
+    color: black;
+}
+
+.newicon{
+    color: white;
+    margin-left: auto;
+}
+  
+.menulist:hover p,
+.menulist:hover i{
+    color: black;
+}
+
+
+/* '~' is used to do change in particular class when the given event has occured*/
+/* In this below line when the cursor hover over the given list items it changes the display-type of active */
+
+</style>
+<style>
+    #main {
+    width: 65rem;
+    position: absolute;
+    left: 16rem;
+    z-index: 1;
+    padding: 22px;
+}
+
+.flexi{
+    display: flex;
+}
+
+.blocks{
+    padding: 22px;
+    width: 22rem;
+    border-radius: 22px;
+    margin: 1rem 2rem;
+    box-shadow: 4px 8px 13px black;
+}
+
+.blocks a{
+    text-decoration: none;
+}
+
+.blocks:hover{
+    cursor: pointer;
+}
+
+.blocks:hover .info{
+    transition: .5s;
+    color: white;
+}
+
+.blocks:hover .imp{
+    text-shadow: 1px 1px 3px black ;
+}
+
+.blocks p{
+    text-align: center;
+    margin: 3px 0px;
+}
+
+.imp{
+    color: red;
+}
+
+#block1{
+    border-bottom: 4px solid rgb(82, 82, 243);
+}
+
+#block1:hover{
+    transition: 0.3s;
+    background-color: rgb(82, 82, 243);
+}
+
+#block2{
+    border-bottom: 4px solid tomato;
+}
+
+#block2:hover{
+    transition: 0.3s;
+    background-color: tomato;
+}
+
+#block3{
+    border-bottom: 4px solid palevioletred;
+}
+
+#block3:hover{
+    transition: 0.3s;
+    background-color: palevioletred;
+}
+
+
+#block4{
+    border-bottom: 4px solid rgb(164, 164, 8);
+}
+
+#block4:hover{
+    transition: 0.3s;
+    background-color: rgb(164, 164, 8);
+}
+
+#block5{
+    border-bottom: 4px solid silver;
+}
+#block5:hover{
+    transition: 0.3s;
+    background-color: silver;
+}
+</style>
+<body>
+    <div id="container">
+
+        <div id="navigationmenu">
+            <div id="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Indian_Institute_of_Information_Technology%2C_Allahabad_Logo.png" alt="CollegeLogo">
+            </div>
+
+            <div id="navbar">
+                <ul id="nav">
+
+                    <li class="menulist"><a class="listlinks" href="">
+                            <div class="fixblock"><p>Dashboard</p><i class="fa-solid fa-house newicon"></i></div>
+                        </a>
+                    </li>
+
+                    <li class="menulist"><a class="listlinks" href="/student/profile/<%=data[0].studentId%>">
+                        <div class="fixblock"><p>Update/View Profile</p><i class="fa-solid fa-address-card newicon"></i></div>
+                        </a>
+                    </li>
+
+                    <li class="menulist"><a class="listlinks" href="#">
+                        <div class="fixblock active"><p>New Internship</p><i class="fa-solid fa-file-lines newicon"></i></div>
+                        </a>
+                    </li>
+
+                    <li class="menulist"><a class="listlinks" href="/student/StudentFAQ/<%=data[0].studentId%>">
+                        <div class="fixblock"><p>Post/View FAQ</p><i class="fa-solid fa-circle-question newicon"></i></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="main">
+            <% for (var i = 0; i < (data2.length);  i++) { %>
+            <div class="flexi">
+                    <div id="block<%=((i+1)%6)%>" class="blocks">
+                   
+                        <p class="imp">Work-Enveave - <%= data2[i].subjects %> (Intern)</p>
+                        <p class="imp">Faculty Name-<%= data2[i].facultyUnder %></p>
+                        <p class="info"><%= data2[i].project_Detail %>
+                        </p>
+                        <p class="imp">Duration- <%= data2[i].timePeriod %> Months</p>
+                        <p class="imp">Status- <%= data2[i].status %></p>
+                        <% if(data2[0].status=="open"){%>
+                            <a href=""><p class="imp">Click To Apply</p></a>
+                        <%}%>
+                    
+                </div>
+            </div>
+            <% } %>
+            <div class="flexi">
+                <div id="block3" class="blocks">
+                    <a href="">
+                        <p class="imp">Work-Enveave - Backend Developer (Intern)</p>
+                        <p class="imp">Faculty Name-Rahul Kala</p>
+                        <p class="info">Live experience of building products in the climate change sector. We promote a
+                            decentralised
+                            work culture which means that you’ll have sufficient freedom to take initiatives, test new
+                            ideas, break stuff and build new things. You see a need – build it, see something broken -
+                            solve
+                            it. We are a cross-functioning tech team and work across different competencies,
+                            collaboratively. You can take initiatives in addition to your core work and based on your
+                            interests to explore work in strategy, operations, marketing, or other tech platforms.
+                            Access to
+                            experienced peers. Our teams are led and mentored by people who have spent years in several
+                            industries. You’ll get direct access to their mentorship and learn from their experiences.
+                        </p>
+                        <p class="imp">Duration- 3 Months</p>
+                        <p class="imp">Click To Apply</p>
+                </div>
+                </a>
+                <div id="block4" class="blocks">
+                    <a href="">
+                        <p class="imp">Work-Enveave - Backend Developer (Intern)</p>
+                        <p class="imp">Faculty Name-Rahul Kala</p>
+                        <p class="info">Live experience of building products in the climate change sector. We promote a
+                            decentralised
+                            work culture which means that you’ll have sufficient freedom to take initiatives, test new
+                            ideas, break stuff and build new things. You see a need – build it, see something broken -
+                            solve
+                            it. We are a cross-functioning tech team and work across different competencies,
+                            collaboratively. You can take initiatives in addition to your core work and based on your
+                            interests to explore work in strategy, operations, marketing, or other tech platforms.
+                            Access to
+                            experienced peers. Our teams are led and mentored by people who have spent years in several
+                            industries. You’ll get direct access to their mentorship and learn from their experiences.
+                        </p>
+                        <p class="imp">Duration- 3 Months</p>
+                        <p class="imp">Click To Apply</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flexi">
+                <div id="block5" class="blocks">
+                    <a href="">
+                        <p class="imp">Work-Enveave - Backend Developer (Intern)</p>
+                        <p class="imp">Faculty Name-Rahul Kala</p>
+                        <p class="info">Live experience of building products in the climate change sector. We promote a
+                            decentralised
+                            work culture which means that you’ll have sufficient freedom to take initiatives, test new
+                            ideas, break stuff and build new things. You see a need – build it, see something broken -
+                            solve
+                            it. We are a cross-functioning tech team and work across different competencies,
+                            collaboratively. You can take initiatives in addition to your core work and based on your
+                            interests to explore work in strategy, operations, marketing, or other tech platforms.
+                            Access to
+                            experienced peers. Our teams are led and mentored by people who have spent years in several
+                            industries. You’ll get direct access to their mentorship and learn from their experiences.
+                        </p>
+                        <p class="imp">Duration- 3 Months</p>
+                        <p class="imp">Click To Apply</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        
+    </script>
+
+    <script src="https://kit.fontawesome.com/24c1065ad6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

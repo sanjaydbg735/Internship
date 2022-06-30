@@ -1,0 +1,21 @@
+<%- include('header') -%>
+
+<%- include('navbar') -%>
+
+  <div id="alert" class="alert alert-danger">
+    login successfull
+</div>
+
+<script type="text/javascript">
+    setTimeout(function () {
+
+        // Closing the alert
+        $('#alert').alert('close');
+    }, 2000);
+</script>
+
+
+<h1>id is : <%=data[0].employeeId %></h1> 
+<h1>name is : <%=data[0].name %></h1> 
+
+<%- include('footer') -%>

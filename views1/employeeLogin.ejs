@@ -1,0 +1,29 @@
+<%- include('header') -%>
+
+<div id="alert" class="alert alert-danger">
+    <%= massage %>
+</div>
+
+<script type="text/javascript">
+    setTimeout(function () {
+
+        // Closing the alert
+        $('#alert').alert('close');
+    }, 5000);
+</script>
+
+<h1>Employee Login</h1>
+ 
+    <form action="/employee" method="post" class='container'>
+        
+        <label>Employee Id:</label>
+        <input type="text" name="employeeId" value="">
+        <br><br>
+        <label>Password: </label>
+        <input type="password" name="password">
+        <br><br>
+        <input type="submit">
+ 
+    </form>
+
+<%- include('footer') -%>

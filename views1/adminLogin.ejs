@@ -1,0 +1,24 @@
+<%- include('header') -%>
+
+<h1>Admin Login</h1>
+ 
+    <form action="/admin" method="post" class='container'>
+        <label>Name:</label>
+        <input type="text" name="name" value="">
+        <br><br>
+        <label>Admin Id:</label>
+        <input type="text" name="admin" value="">
+        <br><br>
+        <label>E-mail:</label>
+        <input type="email" name="emailaddress">
+        <br><br>
+ 
+        <label>Password: </label>
+        <input type="password" name="password">
+        <br><br>
+ 
+        <input type="submit">
+ 
+    </form>
+
+<%- include('footer') -%>
